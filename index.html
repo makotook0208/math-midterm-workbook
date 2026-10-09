@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>１年2学期中間　小テスト</title>
+<style>
+:root{--ink:#24344a;--muted:#69778a;--paper:#fffdf8;--blue:#3568a8;--sky:#eaf3ff;--mint:#e7f6f0;--orange:#ee9b52;--red:#c75b55;--line:#d9e3ee;--shadow:0 12px 32px #253c5a16}
+*{box-sizing:border-box}body{margin:0;background:#f2f6fb;color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;line-height:1.75}.wrap{max-width:920px;margin:auto;padding:20px 15px 56px}.hero{background:linear-gradient(135deg,#244c85,#508fc1);color:#fff;border-radius:28px;padding:28px 24px 25px;box-shadow:var(--shadow)}.eyebrow{font-size:.78rem;letter-spacing:.11em;color:#d8edff}.hero h1{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.25;margin:7px 0}.hero p{margin:8px 0 0;color:#edf7ff}.panel,.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.panel{padding:16px;margin:18px 0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.step{border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center;color:var(--muted);font-size:.9rem;background:#fff}.step.active{background:var(--sky);border-color:#9fc1ea;color:var(--blue);font-weight:700}.progress{display:flex;justify-content:space-between;gap:12px;margin-top:14px;color:var(--muted);font-size:.9rem}.bar{height:9px;background:#e5ebf3;border-radius:99px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--orange);width:0;transition:.3s}.card{padding:23px;margin-bottom:18px}.card h2{margin:0 0 12px;font-size:1.35rem}.lead{color:var(--muted);margin-top:0}.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:17px 0}.lesson-point{background:var(--sky);border-radius:16px;padding:15px;border:1px solid #cfe1f6}.lesson-point b{display:block;color:var(--blue);font-size:1.05rem;margin-bottom:4px}.formula{background:#f7f3e8;border:1px solid #eadfbd;border-radius:16px;padding:17px;text-align:center;font-size:1.12rem;margin:14px 0}.example{background:var(--mint);border-left:5px solid #55a887;padding:12px 15px;border-radius:10px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn{border:0;border-radius:13px;padding:11px 17px;font:inherit;cursor:pointer;background:var(--blue);color:#fff;box-shadow:0 4px 10px #3568a833}.btn:hover{filter:brightness(1.06)}.btn.secondary{background:#e7eef7;color:var(--ink);box-shadow:none}.btn.orange{background:var(--orange)}.btn:disabled{opacity:.45;cursor:not-allowed}.question-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.86rem}.question{font-size:1.16rem;font-weight:700;white-space:pre-wrap;margin:13px 0 18px}.answer-box{background:#fff;border:1px dashed #9fb1c4;border-radius:14px;padding:15px}.answer-box label{display:block;font-size:.88rem;color:var(--muted);margin-bottom:5px}input[type=text]{width:100%;border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}.solution{margin-top:17px;padding:15px;border-radius:14px;background:var(--mint);border-left:5px solid #55a887}.solution.wrong{background:#fff1ef;border-left-color:var(--red)}.solution strong{display:block;margin-bottom:4px}.solution pre{white-space:pre-wrap;font:inherit;margin:8px 0 0}.hint{margin-top:15px;background:#fff6e9;border-left:4px solid var(--orange);padding:10px 12px;border-radius:9px;color:#704d2e}.result{text-align:center}.result-score{font-size:2.4rem;color:var(--blue);font-weight:800}.answer-list{display:grid;gap:10px;margin-top:18px;text-align:left}.answer-list details{background:#fff;border:1px solid var(--line);border-radius:13px;padding:10px 13px}.answer-list summary{cursor:pointer;font-weight:700}.small{font-size:.88rem;color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:22px}@media(max-width:650px){.lesson-grid{grid-template-columns:1fr}.steps{font-size:.8rem}.card{padding:18px}}
+</style>
+<style>
+.teacher{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:18px;align-items:center;background:#fff7ed;border:1px solid #f0d7b7;border-radius:20px;padding:14px;margin:18px 0}.teacher img{width:100%;max-height:190px;object-fit:contain}.speech{position:relative;background:#fff;border:2px solid #e9b77f;border-radius:18px;padding:16px 18px;font-weight:700;color:#704d2e}.speech:before{content:"";position:absolute;left:-12px;top:48%;width:18px;height:18px;background:#fff;border-left:2px solid #e9b77f;border-bottom:2px solid #e9b77f;transform:rotate(45deg)}.speech-label{display:block;color:var(--orange);font-size:.8rem;margin-bottom:4px}.advice-count{display:block;margin-top:8px;color:var(--muted);font-size:.8rem;font-weight:400}@media(max-width:650px){.teacher{grid-template-columns:115px 1fr;gap:10px;padding:10px}.teacher img{max-height:130px}.speech{padding:12px;font-size:.92rem}}
+</style>
+<style>.validation{margin-top:12px;padding:11px 13px;border-radius:10px;background:#fff1ef;border-left:4px solid var(--red);color:#8b3d38;font-weight:700}.step-inputs{display:grid;gap:11px;margin-bottom:14px}.step-input{background:#f7faff;border:1px solid var(--line);border-radius:13px;padding:11px 13px}.step-input label{display:block;color:var(--blue);font-size:.9rem;font-weight:700;margin-bottom:4px}.step-input input{background:#fff}.count-answer{display:grid;grid-template-columns:1fr 1fr;gap:12px}.count-field{display:flex;align-items:end;gap:7px;font-size:1.1rem;font-weight:700}.count-field label{display:block;font-size:.9rem;color:var(--muted);font-weight:400;margin-bottom:4px}.count-field input{min-width:0}.keypad{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;padding:12px;background:#eef5ff;border:1px solid #cfe0f5;border-radius:14px}.keypad button{min-width:42px;border:1px solid #b9cde5;border-radius:10px;background:#fff;color:var(--ink);padding:9px 11px;font:inherit;font-weight:700;cursor:pointer}.keypad button:hover{background:#dcecff}.keypad .fraction{min-width:72px}@media(max-width:650px){.count-answer{grid-template-columns:1fr}}</style><style>.step-choice{width:100%;border:1px solid var(--line);border-radius:10px;background:#fff;padding:11px;font:inherit;color:var(--ink)}</style>
+<style>.question-nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px;padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:.9rem}.question-nav button{border:1px solid #b9cde5;border-radius:9px;background:#fff;color:var(--ink);padding:6px 10px;font:inherit;cursor:pointer}.question-nav button.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:700}.question-nav button:hover{background:#dcecff}.question-nav button.active:hover{background:var(--blue)}.step-explanation{margin-top:8px;padding:8px 10px;border-left:3px solid #55a887;border-radius:7px;background:#eefaf5;color:#39695a;font-size:.9rem}.lecture-answer{margin-top:10px;padding:10px 12px;background:#fff;border-left:4px solid #55a887;border-radius:8px;color:#39695a;font-size:.92rem}.version-picker{margin:14px 0;padding:12px;background:#f7faff;border:1px solid var(--line);border-radius:12px}.version-picker label{margin-right:8px;color:var(--muted)}.version-picker select{border:1px solid var(--line);border-radius:8px;padding:7px;font:inherit;color:var(--ink)}</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div class="eyebrow">MATHEMATICS · 1年生</div>
+  <h1>１年2学期中間　小テスト</h1>
+  <p>講義でポイントを確認してから、4問の演習に挑戦しよう。</p>
+</header>
+
+<section class="panel" aria-label="学習の進み具合">
+  <div class="steps"><div class="step active" id="stepLesson">1　講義</div><div class="step" id="stepPractice">2　演習</div><div class="step" id="stepReview">3　結果・復習</div></div>
+  <div class="progress"><span id="progressText">講義を読むところです</span><span id="scoreText"></span></div>
+  <div class="bar"><span id="progressBar"></span></div>
+</section>
+
+<section id="app"></section>
+<footer>学習内容：方程式・文章問題・計算のまちがい・道のりの問題</footer>
+</main>
+<script>
+const QUESTIONS=[
+ {id:1,title:'文字式をふくむ方程式',q:'xについての方程式 7x−10=ax+14 の解が4であるとき、aの値を求めなさい。',answer:'1',answerLabel:'a = 1',steps:['xに4を代入した式','整理した式'],hint:'解が4ということは、xに4を入れて式を整理します。',solution:'① 解が4なので、xに4を代入します。\n7×4−10=4a+14\n② 左辺を計算します。\n18=4a+14\n③ 両辺から14を引きます。\n4=4a\n④ 4で割ります。\na=1。'},
+ {id:2,title:'数量の関係を方程式にする',q:'1本100円の鉛筆と1本130円のペンをあわせて8本買ったら、代金の合計が860円だった。鉛筆とペンをそれぞれ何本買ったか、方程式をつくってそれぞれ求めなさい。',answer:'鉛筆6本、ペン2本',answerLabel:'鉛筆6本、ペン2本',steps:['ペンをx本とする','鉛筆の本数をxを使って表す','代金の関係を表す方程式'],hint:'ペンをx本とすると、鉛筆は全部で8本なので、8−x本です。',solution:'① ペンをx本とします。\n② 鉛筆は、全部で8本からペンの本数を引いて、8−x本です。\n③ 代金の合計が860円なので、次の方程式をつくります。\n130x+100(8−x)=860\n④ かっこを外して整理します。\n130x+800−100x=860\n30x+800=860\n⑤ 両辺から800を引きます。\n30x=60\n⑥ 30で割ります。\nx=2\n⑦ xはペンの本数なので、ペンは2本。鉛筆は8−2=6本です。\n答えは、鉛筆6本、ペン2本。'},
+ {id:3,title:'小数をふくむ方程式',q:'方程式 4x−0.7=3.1x+2.9 を解きなさい。また、次の解き方のまちがいを説明しなさい。\n\n4x−0.7=3.1x+2.9\n両辺に10をかけると\n4x−7=31x+29\n−27x=36\nx=−4/3',answer:'x=4',answerLabel:'正しい解 x=4',steps:['最初のまちがいを説明する','正しく10をかけた式','整理した式','正しい解'],hint:'両辺に10をかけるときは、4xにも10をかけます。',solution:'① 最初のまちがいは、4xを40xにしていないことです。\n② 正しく両辺に10をかけます。\n40x−7=31x+29\n③ xの項を左辺、数を右辺に集めます。\n40x−31x=29+7\n④ 整理すると、9x=36。\n⑤ 9で割って、x=4。'},
+ {id:4,title:'道のりと時間',q:'家から駅まで、分速60mで歩いたときと、分速80mで歩いたときとでは、かかる時間が12分ちがう。家から駅までの道のりを求めなさい。',answer:'2880m',answerLabel:'2880m',steps:['分速60mのときの時間をx分とする','分速80mのときの時間','道のりの方程式','整理した式','道のり'],hint:'分速60mのときの時間をx分とすると、分速80mで歩いたときはx−12分です。',solution:'① 分速60mで歩く時間をx分とします。分速80mでは12分短いので、x−12分です。\n② 道のりが同じなので、60x=80(x−12)。\n③ 展開して、60x=80x−960。\n④ 整理すると、20x=960、x=48。\n⑤ 道のりは60×48=2880m。'}
+];
+QUESTIONS[3].id=5;
+QUESTIONS.splice(3,0,{id:4,title:'方程式の意味',q:'さくらさんは、次の方程式をつくった。これは、何をxとして、どんな数量の関係を表した方程式か説明しなさい。\n\nx/60−x/80＝12',answer:'道のりをx mとし、分速60mと分速80mの時間の差が12分',answerLabel:'道のりをx mとし、2つの歩く時間の差が12分',hint:'道のりを速さで割ると、かかった時間になります。',solution:'xは、家から駅までの道のりを表しています。\nx/60は分速60mで歩いたときの時間、x/80は分速80mで歩いたときの時間です。\nその時間の差が12分なので、x/60−x/80=12となります。'});
+QUESTIONS[3].q='家から駅まで、分速60mで歩いたときと、分速80mで歩いたときでは、かかる時間が12分ちがいます。\n\n家から駅までの道のりを方程式をつくって求めるとき、次の問いに答えなさい。\n\nさくらさんは、次の方程式をつくりました。これは、何をxとして、どんな数量の関係を表した方程式か説明しなさい。\n\nx/60−x/80＝12';
+QUESTIONS[4].q='【第4問（1）の続き】\n\n家から駅まで、分速60mで歩いたときと、分速80mで歩いたときでは、かかる時間が12分ちがいます。\n\n分速60mで歩いたときにかかる時間をx分として、道のりの関係を表す方程式をつくり、家から駅までの道のりを求めなさい。途中式も書きなさい。';
+const BASE_QUESTIONS=QUESTIONS.map(q=>JSON.parse(JSON.stringify(q)));
+const VARIANT_DATA={2:{
+  1:{q:'xについての方程式 5x−8=ax+12 の解が4であるとき、aの値を求めなさい。',answer:'0',answerLabel:'a = 0',steps:['x＝4','5×4−8＝4a＋12','12＝4a＋12','0＝4a','a＝0'],choices:[['x＝4','x＝−4'],['5×4−8＝4a＋12','5×4＋8＝4a−12'],['12＝4a＋12','28＝4a＋12'],['0＝4a','24＝4a'],['a＝0','a＝4']],solution:'① 解が4なので、xに4を代入します。\n5×4−8=4a+12\n② 左辺を計算します。\n12=4a+12\n③ 両辺から12を引きます。\n0=4a\n④ 4で割ります。\na=0。'},
+  2:{q:'1本100円の鉛筆と1本140円のペンをあわせて7本買ったら、代金の合計が820円だった。鉛筆とペンをそれぞれ何本買ったか、方程式をつくってそれぞれ求めなさい。',answer:'鉛筆4本、ペン3本',answerLabel:'鉛筆4本、ペン3本',steps:['ペンをx本とする','鉛筆は7−x本','140x＋100(7−x)＝820','140x＋700−100x＝820','40x＋700＝820','40x＝120','x＝3','ペンは3本、鉛筆は4本'],choices:[['ペンをx本とする','鉛筆をx本とする'],['鉛筆は7−x本','ペンは7−x本'],['140x＋100(7−x)＝820','100x＋140(7−x)＝820'],['140x＋700−100x＝820','140x＋100(7＋x)＝820'],['40x＋700＝820','240x＋700＝820'],['40x＝120','40x＝1520'],['x＝3','x＝40'],['ペンは3本、鉛筆は4本','ペンは4本、鉛筆は3本']],solution:'① ペンをx本とします。\n② 鉛筆は7−x本です。\n③ 140x+100(7−x)=820\n④ 140x+700−100x=820\n⑤ 40x+700=820\n⑥ 40x=120\n⑦ x=3\n答えは、ペン3本、鉛筆4本。'},
+  3:{q:'方程式 3x−0.8=2.2x+0.8 を解きなさい。また、次の解き方のまちがいを説明しなさい。',answer:'x=2',answerLabel:'正しい解 x=2',steps:['3xを30xにする','30x−8＝22x＋8','30x−22x＝8＋8','8x＝16','x＝2'],choices:[['3xを30xにしていない','0.8を8にしていない'],['30x−8＝22x＋8','3x−8＝22x＋8'],['30x−22x＝8＋8','30x＋22x＝8−8'],['8x＝16','52x＝16'],['x＝2','x＝16']],solution:'① 3xを30xにしていないことがまちがいです。\n② 正しく10をかけると、30x−8=22x+8。\n③ 30x−22x=8+8。\n④ 8x=16。\n⑤ x=2。'},
+  4:{q:'家から駅まで、分速50mで歩いたときと、分速75mで歩いたときでは、かかる時間が10分ちがいます。\n\n家から駅までの道のりを方程式をつくって求めるとき、次の問いに答えなさい。\n\nさくらさんは、次の方程式をつくりました。これは、何をxとして、どんな数量の関係を表した方程式か説明しなさい。\n\nx/50−x/75＝10',answer:'道のりをx mとし、分速50mと分速75mの時間の差が10分',answerLabel:'道のりをx mとし、2つの歩く時間の差が10分',meaning:['道のりをx mとし、分速50mと分速75mの時間の差が10分','分速50mの時間をx分とし、道のりの差が10m','分速75mの時間をx分とし、速さの差が10分','道のりをx分とし、歩く速さの差が10m'],solution:'xは家から駅までの道のりです。\nx/50は分速50mの時間、x/75は分速75mの時間です。\n時間の差が10分なので、x/50−x/75=10です。'},
+  5:{q:'【第4問（1）の続き】\n\n家から駅まで、分速50mで歩いたときと、分速75mで歩いたときでは、かかる時間が10分ちがいます。\n\n分速50mで歩いたときにかかる時間をx分として、道のりの関係を表す方程式をつくり、家から駅までの道のりを求めなさい。途中式も書きなさい。',answer:'1500m',answerLabel:'1500m',steps:['分速50mの時間はx分','x−10分','50x＝75(x−10)','50x＝75x−750','25x＝750','x＝30','50×30＝1500m'],choices:[['分速50mの時間はx分','分速50mの時間はx−10分'],['x−10分','x＋10分'],['50x＝75(x−10)','50x＝75(x＋10)'],['50x＝75x−750','50x＝75x＋750'],['25x＝750','125x＝750'],['x＝30','x＝750'],['50×30＝1500m','75×30＝2250m']],solution:'① 分速50mの時間をx分とします。分速75mでは10分短いのでx−10分です。\n② 道のりが同じなので、50x=75(x−10)。\n③ 50x=75x−750。\n④ 25x=750、x=30。\n⑤ 道のりは50×30=1500m。'}
+}};
+let currentVersion=1;
+function applyVersion(version){
+  currentVersion=version;
+  QUESTIONS.forEach((q,i)=>{const data=version===1?BASE_QUESTIONS[i]:VARIANT_DATA[version]?.[q.id];if(data)Object.assign(q,JSON.parse(JSON.stringify(data)))});
+}
+let mode='lesson',index=0,answers={};
+const $=s=>document.querySelector(s);
+function setStep(active){['Lesson','Practice','Review'].forEach(x=>$('#step'+x).classList.toggle('active',x===active));}
+function updateProgress(){let done=Object.values(answers).filter(x=>x.checked).length;$('#progressText').textContent=mode==='lesson'?'講義を読むところです':mode==='practice'?`第${Math.min(index+1,QUESTIONS.length)}問 / ${QUESTIONS.length}問`:'学習結果';$('#scoreText').textContent=done?`正解 ${Object.values(answers).filter(x=>x.ok).length} / ${done}問`:'';$('#progressBar').style.width=(mode==='lesson'?0:mode==='practice'?(index/QUESTIONS.length)*100:100)+'%';}
+function renderLesson(){mode='lesson';setStep('Lesson');updateProgress();$('#app').innerHTML=`<article class="card"><h2>今回の講義：4問を解くための方程式</h2><p class="lead">この小テストでは、方程式を使って「文字式」「買い物の数量」「計算のまちがい」「道のり」を解きます。講義では、4問に共通する考え方を確認します。</p><div class="lesson-grid"><div class="lesson-point"><b>第1問：文字式</b>解がわかっている方程式に、数を代入してaを求めます。</div><div class="lesson-point"><b>第2・3問：方程式</b>数量の関係を式にし、小数をなくして正しく計算します。</div><div class="lesson-point"><b>第4問：道のり</b>道のり・速さ・時間の関係から、文章を方程式にします。</div></div><div class="formula">道のり ＝ 速さ × 時間<br>速さ ＝ 道のり ÷ 時間</div><div class="example"><b>この講義のゴール：</b>問題文から「何をxにするか」「どんな式を作るか」を自分で判断できるようになることです。</div><div class="actions"><button class="btn" id="start">講義を見終えて演習へ</button><button class="btn secondary" id="skipLesson">講義をスキップして演習へ</button></div></article>`;$('#start').onclick=startPractice;$('#skipLesson').onclick=startPractice;}
+function startPractice(){mode='practice';index=0;setStep('Practice');renderQuestion();}
+function renderQuestion(){updateProgress();let q=QUESTIONS[index],a=answers[q.id];$('#app').innerHTML=`<article class="card"><div class="question-meta"><span>第${q.id}問　${q.title}</span><span>${q.id} / ${QUESTIONS.length}</span></div><div class="question">${q.q}</div><div class="answer-box"><label for="answer">自分の答え</label><input id="answer" type="text" value="${a?.value||''}" placeholder="答えを入力してください" autocomplete="off"></div><div class="actions"><button class="btn secondary" id="hintBtn">ヒントを見る</button><button class="btn" id="checkBtn">答え合わせ</button></div><div id="hint" hidden class="hint"></div><div id="feedback"></div></article>`;$('#hintBtn').onclick=()=>{$('#hint').hidden=false;$('#hint').textContent=q.hint;$('#hintBtn').disabled=true};$('#checkBtn').onclick=()=>check(q);if(a?.checked)showFeedback(q,a);}
+function normalize(v){return String(v).replace(/[！-～]/g,ch=>String.fromCharCode(ch.charCodeAt(0)-0xFEE0)).replace(/[　\s]/g,'').replace(/＝/g,'=').toLowerCase();}
+function isCorrect(q,v){let n=normalize(v),id=Number(q.id);if(id===1)return ['1','a=1'].includes(n);if(id===2)return n.includes('鉛筆6本')&&n.includes('ペン2本');if(id===3)return n==='x=4'||n==='4';if(id===4)return n.includes('道のりをxmとし')&&n.includes('時間の差が12分');if(id===5)return n==='2880m'||n==='2880';return false;}
+function check(q){let stepValues=[...document.querySelectorAll('.step-field')].map(input=>input.value.trim()),value='',extra={};if(q.id===1){let finalValue=$('#aCount').value.trim();if(!finalValue)return;value=`a=${finalValue}`;extra={finalValue};}else if(q.id===2){let pencil=$('#pencilCount').value.trim(),pen=$('#penCount').value.trim();if(!pencil||!pen)return;value=`鉛筆${pencil}本、ペン${pen}本`;extra={pencil,pen};}else if(q.id===3){let finalValue=$('#xCount').value.trim();if(!finalValue)return;value=`x=${finalValue}`;extra={finalValue};}else if(q.id===4){let distance=$('#distanceCount').value.trim();if(!distance)return;value=`${distance}m`;extra={distance};}else{value=$('#answer').value.trim();}if(!value)return;if(/[A-ZＡ-Ｚ]/.test([value,...stepValues].join(''))){let f=$('#feedback');f.className='validation';f.textContent='英字は小文字で入力してください。大文字を小文字に直して、もう一度入力しましょう。';return;}let ok=normalize(value)===normalize(q.answer)||isCorrect(q,value);answers[q.id]={value,steps:stepValues,...extra,ok,checked:true};localStorage.setItem('mathMidtermAnswersV8',JSON.stringify(answers));showFeedback(q,answers[q.id]);updateProgress();}
+function showFeedback(q,a){a=a||{ok:false};let f=$('#feedback');f.className='solution '+(a.ok?'':'wrong');f.innerHTML=`<strong>${a.ok?'正解です。':'もう一度、解説を確認しましょう。'}</strong><div>${q.answerLabel}</div><pre>${q.solution}</pre><div class="actions"><button class="btn orange" id="nextBtn">${index===QUESTIONS.length-1?'結果を見る':'次の問題へ'}</button></div>`;$('#checkBtn').disabled=true;$('#nextBtn').onclick=()=>{if(index===QUESTIONS.length-1)renderResult();else{index++;renderQuestion()}};}
+function renderResult(){mode='review';setStep('Review');updateProgress();let correct=QUESTIONS.filter(q=>answers[q.id]?.ok).length;$('#app').innerHTML=`<article class="card result"><h2>今回の結果</h2><div class="result-score">${correct} / ${QUESTIONS.length}問</div><p>${correct===QUESTIONS.length?'全問正解です。すばらしい！':'解説を読んで、間違えた問題をもう一度確認しましょう。'}</p><div class="answer-list">${QUESTIONS.map(q=>`<details ${answers[q.id]?.ok?'':'open'}><summary>第${q.id}問：${answers[q.id]?.ok?'正解':'要復習'}</summary><p><b>答え：</b>${q.answerLabel}</p><pre>${q.solution}</pre></details>`).join('')}</div><div class="actions" style="justify-content:center"><button class="btn" id="retry">もう一度はじめから</button><button class="btn secondary" id="mistakes">間違えた問題だけ解き直す</button></div></article>`;$('#retry').onclick=()=>{answers={};localStorage.removeItem('mathMidtermAnswersV8');renderLesson()};$('#mistakes').onclick=()=>{let first=QUESTIONS.findIndex(q=>!answers[q.id]?.ok);if(first<0){alert('間違えた問題はありません。');return}index=first;mode='practice';setStep('Practice');renderQuestion()};}
+const baseCheck=check;
+check=function(q){
+  if(q.id===4){
+    const value=$('#meaningAnswer').value.trim();
+    if(!value)return;
+    const ok=normalize(value)===normalize(q.answer)||isCorrect(q,value);
+    answers[q.id]={value,steps:[],ok,checked:true};
+    localStorage.setItem('mathMidtermAnswersV9',JSON.stringify(answers));
+    showFeedback(q,answers[q.id]);
+    updateProgress();
+    return;
+  }
+  if(q.id===5){
+    const distance=$('#distanceCount').value.trim();
+    if(!distance)return;
+    const value=`${distance}m`,ok=normalize(value)===normalize(q.answer)||isCorrect(q,value);
+    answers[q.id]={value,distance,steps:[...document.querySelectorAll('.step-field')].map(input=>input.value.trim()),ok,checked:true};
+    localStorage.setItem('mathMidtermAnswersV9',JSON.stringify(answers));
+    showFeedback(q,answers[q.id]);
+    updateProgress();
+    return;
+  }
+  baseCheck(q);
+};
+const teacherAdvice=[
+ 'この小テストは、方程式を使って4つの問題を解く練習だよ。まずは全体の流れを見てみよう。',
+ '小数をなくすときは、すべての項に同じ数をかけるのがポイントだよ。',
+ '道のり・速さ・時間の関係を使えば、文章問題も式にできるよ。'
+];
+let adviceIndex=0;
+function decorateLesson(){
+  const card=document.querySelector('#app .card');
+  if(!card||card.querySelector('.teacher'))return;
+  const anchor=card.querySelector('.lesson-grid');
+  const teacher=document.createElement('div');
+  teacher.className='teacher';
+  teacher.innerHTML=`<img src="assets/owl-teacher.png" alt="ふくろう先生"><div class="speech"><span class="speech-label">ふくろう先生</span><span id="teacherAdvice">${teacherAdvice[adviceIndex]}</span><span class="advice-count" id="adviceCount">アドバイス 1 / ${teacherAdvice.length}</span><button class="btn secondary" id="nextAdvice" style="margin-top:10px">次のアドバイス</button></div>`;
+  anchor.before(teacher);
+  document.querySelector('#nextAdvice').onclick=()=>{adviceIndex=(adviceIndex+1)%teacherAdvice.length;document.querySelector('#teacherAdvice').textContent=teacherAdvice[adviceIndex];document.querySelector('#adviceCount').textContent=`アドバイス ${adviceIndex+1} / ${teacherAdvice.length}`};
+}
+function decorateQuestion(){
+  const q=QUESTIONS[index],a=answers[q.id]||{},answerBox=document.querySelector('.answer-box');
+  if(!answerBox||!q.steps)return;
+  const steps=document.createElement('div');
+  steps.className='step-inputs';
+  if(q.id===1){
+    const saved=a.steps||[];
+    steps.innerHTML=`<div class="step-input"><label for="step-0">1. 解が4ということから、xに入れる数</label><select class="step-field step-choice" id="step-0"><option value="">選択してください</option><option value="x＝4" ${saved[0]==='x＝4'?'selected':''}>x＝4</option><option value="x＝−4" ${saved[0]==='x＝−4'?'selected':''}>x＝−4</option></select></div><div class="step-input"><label for="step-1">2. xに4を代入した式</label><select class="step-field step-choice" id="step-1"><option value="">選択してください</option><option value="7×4−10＝4a＋14" ${saved[1]==='7×4−10＝4a＋14'?'selected':''}>7×4−10＝4a＋14</option><option value="7×4＋10＝4a−14" ${saved[1]==='7×4＋10＝4a−14'?'selected':''}>7×4＋10＝4a−14</option></select></div><div class="step-input"><label for="step-2">3. 左辺を計算します</label><select class="step-field step-choice" id="step-2"><option value="">選択してください</option><option value="18＝4a＋14" ${saved[2]==='18＝4a＋14'?'selected':''}>18＝4a＋14</option><option value="28＝4a＋14" ${saved[2]==='28＝4a＋14'?'selected':''}>28＝4a＋14</option></select></div><div class="step-input"><label for="step-3">4. 両辺から14を引きます</label><select class="step-field step-choice" id="step-3"><option value="">選択してください</option><option value="4＝4a" ${saved[3]==='4＝4a'?'selected':''}>4＝4a</option><option value="32＝4a" ${saved[3]==='32＝4a'?'selected':''}>32＝4a</option></select></div><div class="step-input"><label for="step-4">5. 4で割ります</label><select class="step-field step-choice" id="step-4"><option value="">選択してください</option><option value="a＝1" ${saved[4]==='a＝1'?'selected':''}>a＝1</option><option value="a＝4" ${saved[4]==='a＝4'?'selected':''}>a＝4</option></select></div>`;
+  }else if(q.id===2){
+    const saved=a.steps||[];
+    steps.innerHTML=`<div class="step-input"><label for="step-0">1. この解き方でxとするもの</label><select class="step-field step-choice" id="step-0" disabled><option value="ペンをx本とする" selected>ペンをx本とする</option></select></div><div class="step-input"><label for="step-1">2. もう一方の本数を表します</label><select class="step-field step-choice" id="step-1"><option value="">選択してください</option><option value="鉛筆は8−x本" ${saved[1]==='鉛筆は8−x本'?'selected':''}>鉛筆は8−x本</option><option value="ペンは8−x本" ${saved[1]==='ペンは8−x本'?'selected':''}>ペンは8−x本</option></select></div><div class="step-input"><label for="step-2">3. 代金の方程式を選びます</label><select class="step-field step-choice" id="step-2"><option value="">選択してください</option><option value="130x＋100(8−x)＝860" ${saved[2]==='130x＋100(8−x)＝860'?'selected':''}>130x＋100(8−x)＝860</option><option value="100x＋130(8−x)＝860" ${saved[2]==='100x＋130(8−x)＝860'?'selected':''}>100x＋130(8−x)＝860</option></select></div>`;
+    steps.insertAdjacentHTML('beforeend',`<div class="step-input"><label for="step-3">4. かっこを外して整理します</label><select class="step-field step-choice" id="step-3"><option value="">選択してください</option><option value="130x＋800−100x＝860" ${saved[3]==='130x＋800−100x＝860'?'selected':''}>130x＋800−100x＝860</option><option value="130x＋100(8＋x)＝860" ${saved[3]==='130x＋100(8＋x)＝860'?'selected':''}>130x＋100(8＋x)＝860</option></select></div><div class="step-input"><label for="step-4">5. 同類項をまとめます</label><select class="step-field step-choice" id="step-4"><option value="">選択してください</option><option value="30x＋800＝860" ${saved[4]==='30x＋800＝860'?'selected':''}>30x＋800＝860</option><option value="230x＋800＝860" ${saved[4]==='230x＋800＝860'?'selected':''}>230x＋800＝860</option></select></div><div class="step-input"><label for="step-5">6. 両辺から800を引きます</label><select class="step-field step-choice" id="step-5"><option value="">選択してください</option><option value="30x＝60" ${saved[5]==='30x＝60'?'selected':''}>30x＝60</option><option value="30x＝1660" ${saved[5]==='30x＝1660'?'selected':''}>30x＝1660</option></select></div><div class="step-input"><label for="step-6">7. 30で割ります</label><select class="step-field step-choice" id="step-6"><option value="">選択してください</option><option value="x＝2" ${saved[6]==='x＝2'?'selected':''}>x＝2</option><option value="x＝30" ${saved[6]==='x＝30'?'selected':''}>x＝30</option></select></div><div class="step-input"><label for="step-7">8. xの意味に戻します</label><select class="step-field step-choice" id="step-7"><option value="">選択してください</option><option value="ペンは2本、鉛筆は6本" ${saved[7]==='ペンは2本、鉛筆は6本'?'selected':''}>ペンは2本、鉛筆は6本</option><option value="ペンは6本、鉛筆は2本" ${saved[7]==='ペンは6本、鉛筆は2本'?'selected':''}>ペンは6本、鉛筆は2本</option></select></div>`);
+  }else if(q.id===3){
+    const saved=a.steps||[];
+    steps.innerHTML=`<div class="step-input"><label for="step-0">1. 最初のまちがいを選びます</label><select class="step-field step-choice" id="step-0"><option value="">選択してください</option><option value="4xを40xにしていない" ${saved[0]==='4xを40xにしていない'?'selected':''}>4xを40xにしていない</option><option value="0.7を7にしていない" ${saved[0]==='0.7を7にしていない'?'selected':''}>0.7を7にしていない</option></select></div><div class="step-input"><label for="step-1">2. 両辺に10をかけた式</label><select class="step-field step-choice" id="step-1"><option value="">選択してください</option><option value="40x−7＝31x＋29" ${saved[1]==='40x−7＝31x＋29'?'selected':''}>40x−7＝31x＋29</option><option value="4x−7＝31x＋29" ${saved[1]==='4x−7＝31x＋29'?'selected':''}>4x−7＝31x＋29</option></select></div><div class="step-input"><label for="step-2">3. xの項を左辺、数を右辺に集めます</label><select class="step-field step-choice" id="step-2"><option value="">選択してください</option><option value="40x−31x＝29＋7" ${saved[2]==='40x−31x＝29＋7'?'selected':''}>40x−31x＝29＋7</option><option value="40x＋31x＝29−7" ${saved[2]==='40x＋31x＝29−7'?'selected':''}>40x＋31x＝29−7</option></select></div><div class="step-input"><label for="step-3">4. 同類項をまとめます</label><select class="step-field step-choice" id="step-3"><option value="">選択してください</option><option value="9x＝36" ${saved[3]==='9x＝36'?'selected':''}>9x＝36</option><option value="71x＝22" ${saved[3]==='71x＝22'?'selected':''}>71x＝22</option></select></div><div class="step-input"><label for="step-4">5. 9で割ります</label><select class="step-field step-choice" id="step-4"><option value="">選択してください</option><option value="x＝4" ${saved[4]==='x＝4'?'selected':''}>x＝4</option><option value="x＝36" ${saved[4]==='x＝36'?'selected':''}>x＝36</option></select></div>`;
+  }else if(q.id===5){
+    const saved=a.steps||[];
+    steps.innerHTML=`<div class="step-input"><label for="step-0">1. 分速60mのときの時間をx分とします</label><select class="step-field step-choice" id="step-0"><option value="">選択してください</option><option value="分速60mの時間はx分" ${saved[0]==='分速60mの時間はx分'?'selected':''}>分速60mの時間はx分</option><option value="分速60mの時間はx−12分" ${saved[0]==='分速60mの時間はx−12分'?'selected':''}>分速60mの時間はx−12分</option></select></div><div class="step-input"><label for="step-1">2. 分速80mのときの時間</label><select class="step-field step-choice" id="step-1"><option value="">選択してください</option><option value="x−12分" ${saved[1]==='x−12分'?'selected':''}>x−12分</option><option value="x＋12分" ${saved[1]==='x＋12分'?'selected':''}>x＋12分</option></select></div><div class="step-input"><label for="step-2">3. 道のりが同じことを式にします</label><select class="step-field step-choice" id="step-2"><option value="">選択してください</option><option value="60x＝80(x−12)" ${saved[2]==='60x＝80(x−12)'?'selected':''}>60x＝80(x−12)</option><option value="60x＝80(x＋12)" ${saved[2]==='60x＝80(x＋12)'?'selected':''}>60x＝80(x＋12)</option></select></div><div class="step-input"><label for="step-3">4. かっこを外します</label><select class="step-field step-choice" id="step-3"><option value="">選択してください</option><option value="60x＝80x−960" ${saved[3]==='60x＝80x−960'?'selected':''}>60x＝80x−960</option><option value="60x＝80x＋960" ${saved[3]==='60x＝80x＋960'?'selected':''}>60x＝80x＋960</option></select></div><div class="step-input"><label for="step-4">5. xについて整理します</label><select class="step-field step-choice" id="step-4"><option value="">選択してください</option><option value="20x＝960" ${saved[4]==='20x＝960'?'selected':''}>20x＝960</option><option value="140x＝960" ${saved[4]==='140x＝960'?'selected':''}>140x＝960</option></select></div><div class="step-input"><label for="step-5">6. xの値を求めます</label><select class="step-field step-choice" id="step-5"><option value="">選択してください</option><option value="x＝48" ${saved[5]==='x＝48'?'selected':''}>x＝48</option><option value="x＝960" ${saved[5]==='x＝960'?'selected':''}>x＝960</option></select></div><div class="step-input"><label for="step-6">7. 道のりを求めます</label><select class="step-field step-choice" id="step-6"><option value="">選択してください</option><option value="60×48＝2880m" ${saved[6]==='60×48＝2880m'?'selected':''}>60×48＝2880m</option><option value="80×48＝3840m" ${saved[6]==='80×48＝3840m'?'selected':''}>80×48＝3840m</option></select></div>`;
+  }else{
+    steps.innerHTML=q.steps.map((label,i)=>`<div class="step-input"><label for="step-${i}">${i+1}. ${label}</label><input class="step-field" id="step-${i}" type="text" value="${a.steps?.[i]||''}" placeholder="式や説明を入力してください" autocomplete="off"></div>`).join('');
+  }
+  if(currentVersion!==1&&VARIANT_DATA[currentVersion]?.[q.id]?.choices){
+    const choices=VARIANT_DATA[currentVersion][q.id].choices;
+    steps.querySelectorAll('select').forEach((select,i)=>{if(!choices[i]||q.id===2&&i===0)return;const savedValue=select.value;select.innerHTML='<option value="">選択してください</option>'+choices[i].map(value=>`<option value="${value}"${value===savedValue?' selected':''}>${value}</option>`).join('');});
+  }
+  steps.querySelectorAll('select').forEach(select=>{
+    const options=[...select.options].slice(1);
+    for(let i=options.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [options[i],options[j]]=[options[j],options[i]];
+    }
+    options.forEach(option=>select.appendChild(option));
+  });
+  answerBox.before(steps);
+}
+function shuffleAnswerChoices(select){
+  const options=[...select.options].slice(1);
+  for(let i=options.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [options[i],options[j]]=[options[j],options[i]];
+  }
+  options.forEach(option=>select.appendChild(option));
+}
+function decorateAnswer(){
+  const q=QUESTIONS[index],a=answers[q.id]||{},box=document.querySelector('.answer-box');
+  if(!box)return;
+  if(q.id===1){
+    box.innerHTML=`<label>解答を入力してください</label><div class="count-field"><span>a ＝</span><input class="count-field-input" id="aCount" type="text" inputmode="numeric" value="${a.finalValue||''}" placeholder="数字"></div>`;
+  }else if(q.id===4){
+    box.innerHTML=`<label for="meaningAnswer">正しい説明を選んでください</label><select class="step-choice" id="meaningAnswer"><option value="">選択してください</option><option value="道のりをx mとし、分速60mと分速80mの時間の差が12分">道のりをx mとし、2つの歩く時間の差が12分</option><option value="分速60mの時間をx分とし、道のりの差が12m">分速60mの時間をx分とし、道のりの差が12m</option><option value="分速80mの時間をx分とし、速さの差が12分">分速80mの時間をx分とし、速さの差が12分</option><option value="道のりをx分とし、歩く速さの差が12m">道のりをx分とし、歩く速さの差が12m</option></select>`;
+    if(currentVersion!==1&&VARIANT_DATA[currentVersion]?.[4]?.meaning){const select=$('#meaningAnswer');select.innerHTML='<option value="">選択してください</option>'+VARIANT_DATA[currentVersion][4].meaning.map(value=>`<option value="${value}">${value}</option>`).join('');}
+    shuffleAnswerChoices($('#meaningAnswer'));
+  }else if(q.id===2){
+    box.innerHTML=`<label>答えの本数を入力してください</label><div class="count-answer"><div class="count-field"><div><label for="pencilCount">鉛筆</label><input class="count-field-input" id="pencilCount" type="text" inputmode="numeric" value="${a.pencil||''}" placeholder="数字"></div><span>本</span></div><div class="count-field"><div><label for="penCount">ペン</label><input class="count-field-input" id="penCount" type="text" inputmode="numeric" value="${a.pen||''}" placeholder="数字"></div><span>本</span></div></div>`;
+  }else if(q.id===3){
+    box.innerHTML=`<label>解答を入力してください</label><div class="count-field"><span>x ＝</span><input class="count-field-input" id="xCount" type="text" inputmode="numeric" value="${a.finalValue||''}" placeholder="数字"></div>`;
+  }else if(q.id===5){
+    box.innerHTML=`<label>道のりを入力してください</label><div class="count-field"><input class="count-field-input" id="distanceCount" type="text" inputmode="numeric" value="${a.distance||''}" placeholder="数字"><span>m</span></div>`;
+  }
+}
+function decorateKeypad(){
+  const answerBox=document.querySelector('.answer-box');
+  if(!answerBox||document.querySelector('.keypad'))return;
+  if(QUESTIONS[index].id===4)return;
+  let activeInput=document.querySelector('#answer,.count-field-input');
+  const keypad=document.createElement('div');
+  keypad.className='keypad';
+  keypad.setAttribute('aria-label','数式入力補助');
+  const keys=[['x','x'],['＋','+'],['−','−'],['×','×'],['÷','÷'],['＝','='],['（','（'],['）','）'],['分数','□/□']];
+  keypad.innerHTML=keys.map(([label,value])=>`<button type="button" class="${label==='分数'?'fraction':''}" data-value="${value}">${label}</button>`).join('');
+  answerBox.after(keypad);
+  document.querySelectorAll('.step-field,#answer,.count-field-input').forEach(input=>input.addEventListener('focus',()=>{activeInput=input}));
+  keypad.querySelectorAll('button').forEach(button=>button.onclick=()=>{let value=button.dataset.value,start=activeInput.selectionStart??activeInput.value.length,end=activeInput.selectionEnd??activeInput.value.length;activeInput.value=activeInput.value.slice(0,start)+value+activeInput.value.slice(end);activeInput.focus();activeInput.setSelectionRange(start+value.length,start+value.length)});
+}
+function expectedSteps(id){
+  if(currentVersion!==1&&VARIANT_DATA[currentVersion]?.[id]?.steps)return VARIANT_DATA[currentVersion][id].steps;
+  if(id===1)return ['x＝4','7×4−10＝4a＋14','18＝4a＋14','4＝4a','a＝1'];
+  if(id===2)return ['ペンをx本とする','鉛筆は8−x本','130x＋100(8−x)＝860','130x＋800−100x＝860','30x＋800＝860','30x＝60','x＝2','ペンは2本、鉛筆は6本'];
+  if(id===3)return ['4xを40xにしていない','40x−7＝31x＋29','40x−31x＝29＋7','9x＝36','x＝4'];
+  if(id===5)return ['分速60mの時間はx分','x−12分','60x＝80(x−12)','60x＝80x−960','20x＝960','x＝48','60×48＝2880m'];
+  return [];
+}
+function stepExplanations(id){
+  if(currentVersion!==1)return VARIANT_DATA[currentVersion]?.[id]?.steps?.map((_,i)=>`この問題でも、前の問題と同じ考え方で第${i+1}段階を確認します。`)||[];
+  if(id===1)return ['解が4とは、xに4を代入すると式が成り立つという意味です。','xに4を代入して、aを含む式にします。','7×4−10を計算すると18になります。','aを含む4aを残すため、両辺から14を引きます。','4aをaにするため、両辺を4で割ります。'];
+  if(id===2)return ['ペンをx本とすると、あとでxの値がペンの本数になります。','全部で8本なので、鉛筆は8−x本です。','ペンの代金130xと鉛筆の代金100(8−x)を足します。','100をかっこの中の8と−xに、それぞれかけます。','130x−100xを計算すると30xになります。','x以外の800を消して、xを残すために両辺から800を引きます。','30xをxにするため、両辺を30で割ります。','xはペンの本数なので、鉛筆は8−2で6本です。'];
+  if(id===3)return ['両辺に10をかけると、4xも40xになります。','小数をなくすため、すべての項に10をかけます。','xの項を左辺、数を右辺に集めます。','40x−31xは9x、29＋7は36です。','9xをxにするため、両辺を9で割ります。'];
+  if(id===5)return ['分速60mで歩く時間をx分と決めます。','xは分速60mで歩く時間です。分速80mの方が速いので、同じ道のりなら歩く時間は短くなります。12分短いので、分速80mの時間はx−12分です。','分速60mの道のりは60×x＝60x、分速80mの道のりは80×(x−12)です。家から駅までの道のりは同じなので、60x＝80(x−12)となります。','80をx−12にそれぞれかけます。','80x−60xを整理すると20xになります。','20x＝960を20で割ると、時間は48分です。','道のりは分速60m×48分で求められます。'];
+  return [];
+}
+function setupStepLocks(){
+  const q=QUESTIONS[index],expected=expectedSteps(q.id),selects=[...document.querySelectorAll('.step-field')];
+  if(!expected.length||!selects.length)return;
+  const explanations=stepExplanations(q.id),notes=selects.map((select,i)=>{const note=document.createElement('div');note.className='step-explanation';note.hidden=true;select.after(note);return note});
+  const answerInputs=[...document.querySelectorAll('#aCount,#pencilCount,#penCount,#xCount,#distanceCount')];
+  const setAnswerEnabled=enabled=>{answerInputs.forEach(input=>input.disabled=!enabled);const checkButton=$('#checkBtn');if(checkButton)checkButton.disabled=!enabled};
+  const allCorrect=()=>selects.length===expected.length&&selects.every((select,i)=>select.value===expected[i]);
+  const refresh=()=>{
+    selects.forEach((select,i)=>{if(i===0){select.disabled=q.id===2||select.disabled&&select.value===expected[i];}else{select.disabled=selects[i-1].value!==expected[i-1];}notes[i].hidden=select.value!==expected[i];if(!notes[i].hidden)notes[i].textContent=explanations[i]||'';});
+    setAnswerEnabled(allCorrect());
+  };
+  selects.forEach((select,i)=>select.addEventListener('change',()=>{
+    if(select.value!==expected[i]){
+      selects.slice(i+1).forEach(next=>{next.value='';next.disabled=true});
+      notes.slice(i).forEach(note=>{note.hidden=true;note.textContent=''});
+      setAnswerEnabled(false);
+      const feedback=$('#feedback');if(feedback){feedback.className='validation';feedback.textContent=`${i+1}番目の途中式を確認して、正しい式を選びましょう。`}
+    }else{
+      const feedback=$('#feedback');if(feedback&&allCorrect())feedback.textContent='途中式がすべて正しく選べました。解答を入力しましょう。';
+      refresh();
+    }
+  }));
+  refresh();
+}
+function setupQuestionNav(){
+  const app=document.querySelector('#app');
+  if(!app||app.querySelector('.question-nav'))return;
+  const nav=document.createElement('nav');
+  nav.className='question-nav';
+  nav.setAttribute('aria-label','問題を選ぶ');
+  nav.innerHTML=`<span>問題を選ぶ：</span>${QUESTIONS.map((q,i)=>`<button type="button" class="${i===index?'active':''}" data-index="${i}">第${q.id}問</button>`).join('')}`;
+  nav.querySelectorAll('button').forEach(button=>button.onclick=()=>{index=Number(button.dataset.index);mode='practice';setStep('Practice');renderQuestion()});
+  app.prepend(nav);
+}
+const baseRenderQuestion=renderQuestion;
+renderQuestion=function(){baseRenderQuestion();setupQuestionNav();decorateQuestion();decorateAnswer();decorateKeypad();setupStepLocks()};
+const baseRenderResult=renderResult;
+renderResult=function(){
+  baseRenderResult();
+  const mistakes=$('#mistakes');
+  if(mistakes)mistakes.onclick=()=>{
+    const first=QUESTIONS.findIndex(q=>!answers[q.id]?.ok);
+    if(first<0){alert('間違えた問題はありません。');return}
+    delete answers[QUESTIONS[first].id];
+    index=first;mode='practice';setStep('Practice');renderQuestion();
+  };
+};
+function upgradeLesson(){
+  const card=document.querySelector('#app .card');
+  if(!card)return;
+  card.innerHTML=`<h2>今回の講義：5問を解くための考え方</h2><p class="lead">問題を解く前に、5問それぞれの「最初に考えること」を確認します。分かったら確認ボタンを押して、理由を見てみましょう。</p><div class="lesson-grid"><div class="lesson-point"><b>第1問：解を代入する</b><p>「解が4」と書いてあるとき、最初に何をしますか？</p><button class="btn secondary lecture-check" data-target="lecture-1">確認する</button><div class="lecture-answer" id="lecture-1" hidden>xに4を代入します。解とは、代入したときに式が成り立つ値のことです。</div></div><div class="lesson-point"><b>第2問：数量を文字で表す</b><p>何をxとするかを決め、もう一方の数量をxで表します。</p><button class="btn secondary lecture-check" data-target="lecture-2">確認する</button><div class="lecture-answer" id="lecture-2" hidden>ペンをx本とすると、全部で8本なので鉛筆は8−x本です。代金は「値段×本数」で表します。</div></div><div class="lesson-point"><b>第3問：小数をなくす</b><p>両辺に10をかけるとき、どの項にかけますか？</p><button class="btn secondary lecture-check" data-target="lecture-3">確認する</button><div class="lecture-answer" id="lecture-3" hidden>左辺と右辺のすべての項に10をかけます。4xも10倍して40xにします。</div></div><div class="lesson-point"><b>第4問：式の意味を読む</b><p>道のりを速さで割ると、何が求められますか？</p><button class="btn secondary lecture-check" data-target="lecture-4">確認する</button><div class="lecture-answer" id="lecture-4" hidden>道のり÷速さ＝時間です。xが道のりなら、x/60とx/80はそれぞれの歩く時間を表します。</div></div><div class="lesson-point"><b>第5問：同じ道のりを表す</b><p>分速60mと分速80mで歩くとき、同じになるものは何ですか？</p><button class="btn secondary lecture-check" data-target="lecture-5">確認する</button><div class="lecture-answer" id="lecture-5" hidden>例えば、家からコンビニまで1200mあるとします。分速60mなら20分、分速80mなら15分です。どちらも「速さ×時間」は1200mになり、同じ道のりを表します。実際の問題では、分速60mの時間をx分、分速80mの時間をx−12分とします。だから、分速60mの道のりは60×x＝60x、分速80mの道のりは80×(x−12)です。同じ道のりなので、60x＝80(x−12)となります。</div></div></div><div class="example"><b>講義のポイント：</b>①何をxにするか決める　②問題文を式にする　③xをひとりにする　④最後に答えの意味を確認する</div><div class="actions"><button class="btn" id="start">講義を見終えて演習へ</button><button class="btn secondary" id="skipLesson">講義をスキップして演習へ</button></div>`;
+  const versionBox=document.createElement('div');versionBox.className='version-picker';versionBox.innerHTML='<label for="versionSelect">練習するバージョン：</label><select id="versionSelect"><option value="1">バージョン1（基本）</option><option value="2">バージョン2（数字を変えた類題）</option></select>';card.querySelector('.example').before(versionBox);
+  const lecture5=card.querySelector('#lecture-5');
+  if(lecture5)lecture5.innerHTML=lecture5.innerHTML.replace('実際の問題では、分速60mの時間をx分、分速80mの時間をx−12分とします。','実際の問題では、まず分速60mで歩く時間をx分とします。分速80mの方が速いので、同じ道のりなら時間は短くなります。12分短いので、分速80mの時間はx−12分です。');
+  const checks=[...card.querySelectorAll('.lecture-check')],answersShown=new Set();
+  checks.forEach(button=>button.onclick=()=>{const target=document.getElementById(button.dataset.target);target.hidden=false;button.disabled=true;answersShown.add(button.dataset.target);const count=document.querySelector('#lectureCount');if(count)count.textContent=`確認した講義 ${answersShown.size} / 5`});
+  const count=document.createElement('p');count.id='lectureCount';count.className='small';count.textContent='確認した講義 0 / 5';card.querySelector('.example').before(count);
+  const begin=()=>{applyVersion(Number($('#versionSelect').value));startPractice()};$('#start').onclick=begin;$('#skipLesson').onclick=begin;
+}
+const baseRenderLesson=renderLesson;
+renderLesson=function(){baseRenderLesson();upgradeLesson();decorateLesson()};
+renderLesson();
+</script>
+</body>
+</html>
